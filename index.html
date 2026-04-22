@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata-Kata Acak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kata Kata Acak👏👏</h1>
+
+        <div class="category-selection">
+            <p>Pilih kategori kata-kata:</p>
+            <button class="category-btn" onclick="selectCategory('sad')">Sad</button>
+            <button class="category-btn" onclick="selectCategory('motivasi')">Motivasi</button>
+            <button class="category-btn" onclick="selectCategory('bucin')">Bucin</button>
+            <button class="category-btn" onclick="selectCategory('penyemangat')">Penyemangat</button>
+        </div>
+
+        <div id="kata-container" class="kata-container" style="display: none;">
+            <p id="kata">Klik tombol untuk mendapatkan kata-kata baru</p>
+            <button onclick="generateKata()">Dapatkan Kata Baru</button>
+            <button onclick="goBack()">Kembali</button> <!-- Tombol Kembali -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
