@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 5px;
+}
+
+.category-selection {
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    padding: 15px 30px;
+    margin: 12px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-btn:hover {
+    background: linear-gradient(45deg, #ff8c00, #ff0080);
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#kata-container {
+    display: none;
+}
+
+#kata {
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+
+    /* Animasi untuk efek */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards, zoomIn 1s ease-out forwards;
+}
+
+/* Animasi untuk efek kata */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+body.sad {
+    background-color: #fce8e8;
+}
+
+body.motivasi {
+    background-color: #d2f7e3;
+}
+
+body.bucin {
+    background-color: #fdf7e6;
+}
+
+body.penyemangat {
+    background-color: #e1f0ff;
+}
+
+/* Styling berdasarkan kategori */
+body.sad .container {
+    border-top: 6px solid #ffcccc;
+}
+
+body.motivasi .container {
+    border-top: 6px solid #99ff99;
+}
+
+body.bucin .container {
+    border-top: 6px solid #ffeb99;
+}
+
+body.penyemangat .container {
+    border-top: 6px solid #99ccff;
+}
+
+/* Media Queries untuk perangkat mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .category-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    #kata {
+        font-size: 20px;
+    }
+}
